@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>MegaTurboChat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/chat.css">
+  </head>
+  <body>
+    
+    <div class="container d-flex text-center h-100 justify-content-center">
+      <div class="row align-items-center justify-content-center w-100">
+        <div id = "ask_name" class="col-sm-12 col-md-9 col-lg-6 col-xl-5">
+          <h3>Enter your nickname</h3>
+
+          <div id = "name_error">
+            <p><strong>Please, enter your nickname!</strong></p>
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nickname">
+            <div class="input-group-append">
+              <button class="btn btn-success">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="container">
+      <ul id="messages"></ul>
+    </div>
+    
+    <div class="container fixed-bottom d-none">
+      <form id = "enter_message" class="input-group" action="">
+        <input id="m" class="form-control" autocomplete="off" placeholder="Type your message">
+        <div class="input-group-append">
+            <button class="btn btn-primary">Send</button>
+        </div>            
+      </form>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js""></script>
+    <script src="static/mychat.js""></script>
+  </body>
+</html>
